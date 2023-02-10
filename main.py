@@ -13,6 +13,10 @@ def a_tuple():
     return this_tuple
 
 
+new_list = []
+
+number_list = [100, 50, 65, 82, 23]
+
 another_list = another_list()
 my_list = my_list()
 a_tuple = a_tuple()
@@ -72,3 +76,69 @@ print(my_list)
 
 del my_list[3]  # del also removes according to the specified index
 print(my_list)
+
+# Looping through a list
+for x in my_list:
+    print(x)
+
+print()
+
+for i in range(len(my_list)):  # looping through index and len
+    print(my_list[i])
+
+print()
+
+[print(x) for x in my_list]  # Using list comprehension
+
+#  List comprehension
+for x in my_list:
+    if "o" in x:
+        new_list.append(x)
+
+print(new_list)
+
+print()
+
+new_list = [x for x in new_list if "a" in x]
+print(new_list)
+
+print()
+
+new_list = [x for x in new_list if x != "apple"]
+print(new_list)
+
+#  Sorting a list
+my_list.sort()
+print(my_list)
+
+print()
+
+new_list.sort(reverse=True)
+print(new_list)
+
+print()
+
+number_list.sort(reverse=True)
+print(number_list)
+
+new_list.reverse()
+print(new_list)
+
+#  Copying a list
+mylist = my_list.copy()
+print(mylist)
+
+another_list = list(number_list)
+print(another_list)
+
+# Joining lists
+list3 = another_list + new_list
+print(list3)
+
+for x in mylist:
+    number_list.append(x)
+
+print(number_list)
+
+new_list.extend(another_list)
+print(new_list)
